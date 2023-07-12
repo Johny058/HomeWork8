@@ -48,21 +48,16 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
-        int[] months = new int[10];
         int nums = 1;
-        months[0] = 1;
-        months[1] = 3;
-        months[2] = 5;
-        months[3] = 7;
-        months[4] = 9;
-        months[5] = 11;
-        months[6] = 13;
-        months[7] = 15;
-        months[8] = 17;
-        months[9] = 19;
+        int[] months = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        for (int i = 1; i < months.length; i++) {
-            System.out.println(months[i] + nums);
+        months[0] = 1;
+
+        for (int i = 0; i < 10; i++) {
+            months[i] += nums;
+            if (months[i] % 2 == 0) {
+                System.out.println(months[i]);
+            }
         }
     }
 }
